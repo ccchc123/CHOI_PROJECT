@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 네이버폰트 -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <!-- common -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- header -->
+    <link rel="stylesheet" href="css/header.css">
+    <!-- Main_Search_Page css -->
+    <link rel="stylesheet" href="css/Main_Search_Page.css">
+    <!-- footer -->
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- mobile_header -->
+    <link rel="stylesheet" href="./css/mobile_header.css" media="all and (max-width:480px)">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- https://fontawesome.com/ -->
+    <!-- Font Awesome 라이브러리를 사용하려면 head 태그 안에 다음 코드를 추가해야 합니다. -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- 메인 -->
+        <header>
+            <div class="top-header">
+                <a href="./index.html"><img class="logo" src="./img/로고.png" alt=""></a>
+                <div class="search_box">
+                    <div>SEARCH</div>
+                    <input id="searchInput" type="text" placeholder="듣고 싶은 노래를 검색하세요!">
+                    <a href=""><img src="./img/search.svg" alt=""></a>
+                </div>
+                <ul>
+                    <li><a href="" style="color:rgb(92, 115, 6); font-family: 'NanumSquareAceb';"><img
+                                src="./img/add.svg" alt=""> 멤버십가입</a></li>
+                    <li><a href=""><img src="./img/english.svg" alt="">ENGLISH</a></li>
+                </ul>
+            </div>
+        </header>
+        <nav>
+            <div class="mobilemenu">
+                <span href="" class="material-symbols-outlined">menu
+                    <ul class="wa">
+                        <li><a href="">수박차트</a></li>
+                        <li><a href="">수박DJ</a></li>
+                        <li><a href="">수박TV</a></li>
+                        <li><a href="">수박매거진</a></li>
+                        <li><a href="./QnA_Page.html">공지사항</a></li>
+                        <li><a href="">마이페이지</a></li>
+                    </ul>
+                </span>
+            </div>
+            <div class="navi">
+                <div class="Menu_left">
+                    <ul class="one--depth">
+                        <li>
+                            <a href="">수박차트</a>
+                            <ul class="two--depth">
+                                <li><a href="./TOP100.html">국내TOP100</a></li>
+                                <li><a href="">해외TOP100</a></li>
+                                <li><a href="">최신음악</a></li>
+                                <li><a href="">장르음악</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박DJ</a>
+                            <ul class="two--depth">
+                                <li><a href="">#투데이</a></li>
+                                <li><a href="">테마장르</a></li>
+                                <li><a href="">인기선곡</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박TV</a>
+                            <ul class="two--depth">
+                                <li><a href="">뮤직비디오</a></li>
+                                <li><a href="">수박방송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박매거진</a>
+                            <ul class="two--depth">
+                                <li><a href="">오늘의매거진</a></li>
+                                <li><a href="">완결매거진</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Menu_right">
+                    <ul class="one--depth">
+                        <li>
+                            <a href="">공지사항</a>
+                            <ul class="two--depth">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="./QnA_Page.html">QnA</a></li>
+                                <li><a href="">자주하는질문</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">마이페이지</a>
+                            <ul class="two--depth">
+                                <li><a href="">정보수정</a></li>
+                                <li><a href="">마이리스트</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <div class="header_line"></div>
+        <main>
+            <aside class="searchresult"> 검색 결과
+                <div class="table-wrapper">
+                    <table id="searchTable">
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Artist</th>
+                            <th>Image</th>
+                            <th>Controls</th>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td> <!-- 버튼들을 포함하는 열 -->
+                                <button onclick="previous()">⏪</button>
+                                <button onclick="togglePlayback(this)">▶</button>
+                                <button onclick="next()">⏩</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td> <!-- 버튼들을 포함하는 열 -->
+                                <button onclick="previous()">⏪</button>
+                                <button onclick="togglePlayback(this)">▶</button>
+                                <button onclick="next()">⏩</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td> <!-- 버튼들을 포함하는 열 -->
+                                <button onclick="previous()">⏪</button>
+                                <button onclick="togglePlayback(this)">▶</button>
+                                <button onclick="next()">⏩</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td> <!-- 버튼들을 포함하는 열 -->
+                                <button onclick="previous()">⏪</button>
+                                <button onclick="togglePlayback(this)">▶</button>
+                                <button onclick="next()">⏩</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td> <!-- 버튼들을 포함하는 열 -->
+                                <button onclick="previous()">⏪</button>
+                                <button onclick="togglePlayback(this)">▶</button>
+                                <button onclick="next()">⏩</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td> <!-- 버튼들을 포함하는 열 -->
+                                <button onclick="previous()">⏪</button>
+                                <button onclick="togglePlayback(this)">▶</button>
+                                <button onclick="next()">⏩</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td> <!-- 버튼들을 포함하는 열 -->
+                                <button onclick="previous()">⏪</button>
+                                <button onclick="togglePlayback(this)">▶</button>
+                                <button onclick="next()">⏩</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td> <!-- 버튼들을 포함하는 열 -->
+                                <button onclick="previous()">⏪</button>
+                                <button onclick="togglePlayback(this)">▶</button>
+                                <button onclick="next()">⏩</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td> <!-- 버튼들을 포함하는 열 -->
+                                <button onclick="previous()">⏪</button>
+                                <button onclick="togglePlayback(this)">▶</button>
+                                <button onclick="next()">⏩</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td> <!-- 버튼들을 포함하는 열 -->
+                                <button onclick="previous()">⏪</button>
+                                <button onclick="togglePlayback(this)">▶</button>
+                                <button onclick="next()">⏩</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <div class="footer_line"></div>
+            <div>
+                <ul class="footer_menu">
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a href="">제휴/프로모션</a></li>
+                    <li><a href=""> 개인정보처리방침</a></li>
+                </ul>
+            </div>
+            <p></p>
+            <div class="Site_info">
+                <img id="footer_logo" src="./img/로고.png" alt="">
+                <span class="Sitename">(주)WATERMELON MUSIC</span>
+                <span>대구광역시 중구 중앙대로 366 반월센트럴타워 10층</span>
+                <span>대표이사 : 윤치연, 김예솔, 이헌지</span>
+                <span>사업자등록번호 : 024-04-02023</span>
+                <br>
+                <span>문의전화 : 1544-1111 (평일 09:00-18:00)</span>
+                <span>WATERMELON MUSIC으로 음악과 함께하는 즐거운 하루 보내세요!</span>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    var rows = document.querySelectorAll('.table-wrapper table tr');
+
+    for (var i = 1; i < rows.length; i++) {
+        var cell = document.createElement('td');
+        cell.textContent = i;
+        rows[i].insertBefore(cell, rows[i].firstChild);
+    }
+    var isPlaying = false;
+
+    function togglePlayback(button) {
+        if (isPlaying) {
+            pause();
+            button.textContent = '▶';
+        } else {
+            play();
+            button.textContent = '⏸';
+        }
+    }
+
+    function play() {
+        // 재생 버튼 동작
+        isPlaying = true;
+        console.log('재생');
+    }
+
+    function pause() {
+        // 정지 버튼 동작
+        isPlaying = false;
+        console.log('정지');
+    }
+
+    function previous() {
+        // 이전 버튼 동작
+        console.log('이전');
+    }
+
+    function next() {
+        // 다음 버튼 동작
+        console.log('다음');
+    }
+
+    function search() {
+        // 검색어 가져오기
+        var input = document.getElementById('searchInput');
+        var searchText = input.value;
+
+        // TODO: 검색어를 기반으로 데이터 필터링 또는 서버로 요청 보내기
+
+        // 검색 결과 표시
+        var table = document.getElementById('searchTable');
+        // TODO: 테이블에 검색 결과 추가 또는 업데이트
+    }
+</script>

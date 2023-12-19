@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/TOP100.css">
+    <title>My Web Page</title>
+     <!-- 네이버폰트 -->
+     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+     <!-- common -->
+     <link rel="stylesheet" href="css/common.css">
+     <!-- header -->
+     <link rel="stylesheet" href="css/header.css">
+     <!-- footer -->
+     <link rel="stylesheet" href="css/footer.css">
+     <!-- Login_Page_Section -->
+     <link rel="stylesheet" href="css/Login_Page.css">
+</head>
+
+<body>
+
+    <!-- <script>
+        var musicData = [
+          { rank: 1, image: 'song1.jpg', name: '노래 1', artist: '아티스트 1' },
+          { rank: 2, image: 'song2.jpg', name: '노래 2', artist: '아티스트 2' },
+          { rank: 3, image: 'song3.jpg', name: '노래 3', artist: '아티스트 3' },
+          // 나머지 음악 데이터
+        ];
+    
+        function createMusicList() {
+          var musicList = document.getElementById('music-list');
+    
+          // 음악 데이터를 클릭 순으로 정렬합니다.
+          musicData.sort(function(a, b) {
+            return a.rank - b.rank;
+          });
+    
+          for (var i = 0; i < musicData.length; i++) {
+            var song = musicData[i];
+            var songElement = document.createElement('div');
+            songElement.classList.add('song');
+    
+            var imageElement = document.createElement('img');
+            imageElement.src = song.image;
+            songElement.appendChild(imageElement);
+    
+            var rankElement = document.createElement('span');
+            rankElement.textContent = song.rank;
+            songElement.appendChild(rankElement);
+    
+            var nameElement = document.createElement('span');
+            nameElement.textContent = song.name;
+            songElement.appendChild(nameElement);
+    
+            var artistElement = document.createElement('span');
+            artistElement.textContent = song.artist;
+            songElement.appendChild(artistElement);
+    
+            musicList.appendChild(songElement);
+          }
+        }
+      </script> -->
+      <script>      function increaseLikes(button) {
+        var likesCount = button.nextElementSibling;
+        likesCount.textContent = parseInt(likesCount.textContent) + 1;
+      }
+    </script>
+
+
+
+<div class="wrapper">
+    <!-- header -->
+        <!-- top-header -->
+        <header>
+            <div class="top-header">
+                <a href="./index.html"><img class="logo" src="./img/로고.png" alt=""></a>
+                <div class="search_box">
+                    <div>SEARCH</div>
+                    <input type="text" placeholder="듣고 싶은 노래를 검색하세요!">
+                    <a href=""><img src="./img/search.svg" alt=""></a>
+                </div>
+                <ul>
+                    <li><a href="" style="color:rgb(92, 115, 6); font-family: 'NanumSquareAceb';"><img
+                                src="./img/add.svg" alt=""> 멤버십가입</a></li>
+                    <li><a href=""><img src="./img/english.svg" alt="">ENGLISH</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- header nav -->
+        <nav>
+            <div class="navi">
+                <div class="Menu_left">
+                    <ul class="one--depth">
+                        <li>
+                            <a href="">수박차트</a>
+                            <ul class="two--depth">
+                                <li><a href="./TOP100.html">국내TOP100</a></li>
+                                <li><a href="">해외TOP100</a></li>
+                                <li><a href="">최신음악</a></li>
+                                <li><a href="">장르음악</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박DJ</a>
+                            <ul class="two--depth">
+                                <li><a href="">#투데이</a></li>
+                                <li><a href="">테마장르</a></li>
+                                <li><a href="">인기선곡</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박TV</a>
+                            <ul class="two--depth">
+                                <li><a href="">뮤직비디오</a></li>
+                                <li><a href="">수박방송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박매거진</a>
+                            <ul class="two--depth">
+                                <li><a href="./magazine.html">오늘의매거진</a></li>
+                                <li><a href="">완결매거진</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Menu_right">
+                    <ul class="one--depth">
+                        <li>
+                            <a href="">공지사항</a>
+                            <ul class="two--depth">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="./QnA_Page.html">QnA</a></li>
+                                <li><a href="">자주하는질문</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">마이페이지</a>
+                            <ul class="two--depth">
+                                <li><a href="">정보수정</a></li>
+                                <li><a href="">마이리스트</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="header_line"></div>
+
+            <section class="TOP100">
+                
+                <div class="TOP100Text">
+                    <h1>음악 TOP100</h1>
+                 </div>
+                <div class="playButton">
+                    <button onclick="shufflePlayList" class="shufflePlayListButton">▶ 셔플재생</button>
+                    <button onclick="playAll" class="playAllButton">▶ 전체재생</button>
+                </div>
+                
+                <div class="music-list">
+                    <div class="song">
+                        <div class="song-checkbox">
+                            <input type="checkbox" name="song-check" id="song-check-1">
+                        </div>
+                        <span>1</span>
+                        <img src="./img/song1.webp" alt="노래 1"> 
+                        <span class="songname">Super Shy</span>
+                        <span class="songname">NewJeans</span>
+                        <div class="heart">
+                            <button class="heart-button" onclick="increaseLikes(this)">❤</button>
+                            <li class="likes-count">0</li>
+                            <span></span>
+                        </div>
+                            <audio controls >
+                                <source src="song1.mp3" type="audio/mpeg">
+                        </audio>
+                        
+                    </div>
+                    <div class="song">
+                        <div class="song-checkbox">
+                            <input type="checkbox" name="song-check" id="song-check-1">
+                        </div>
+                        <span>2</span>
+                        <img src="./img/song2.jpg" alt="노래 1">
+                        <span class="songname">Seven</span>
+                        <span class="songname">정국</span>
+                        <div class="heart">
+                            <button class="heart-button" onclick="increaseLikes(this)">❤</button>
+                            <li class="likes-count">0</li>
+                            <span></span>
+                        </div>
+                            <audio controls >
+                                <source src="song1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="song">
+                        <div class="song-checkbox">
+                            <input type="checkbox" name="song-check" id="song-check-1">
+                        </div>
+                        <span>3</span>
+                        <img src="./img/song3.jpg" alt="노래 1">
+                        <span class="songname">퀸카</span>
+                        <span class="songname">여자아이들</span>
+                        <div class="heart">
+                            <button class="heart-button" onclick="increaseLikes(this)">❤</button>
+                            <li class="likes-count">0</li>
+                            <span></span>
+                        </div>
+                            <audio controls >
+                                <source src="song1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="song">
+                        <div class="song-checkbox">
+                            <input type="checkbox" name="song-check" id="song-check-1">
+                        </div>
+                        <span>4</span>
+                        <img src="./img/song4.jpg" alt="노래 1">
+                        <span class="songname">헤어지자 말해요</span>
+                        <span class="songname">박재정</span>
+                        <div class="heart">
+                            <button class="heart-button" onclick="increaseLikes(this)">❤</button>
+                            <li class="likes-count">0</li>
+                            <span></span>
+                        </div>
+                            <audio controls >
+                                <source src="song1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="song">
+                        <div class="song-checkbox">
+                            <input type="checkbox" name="song-check" id="song-check-1">
+                        </div>
+                        <span>5</span>
+                        <img src="./img/song5.jpg" alt="노래 1">
+                        <span class="songname">I AM</span>
+                        <span class="songname">아이브</span>
+                        <div class="heart">
+                            <button class="heart-button" onclick="increaseLikes(this)">❤</button>
+                            <li class="likes-count">0</li>
+                            <span></span>
+                        </div>
+                            <audio controls >
+                                <source src="song1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="song">
+                        <div class="song-checkbox">
+                            <input type="checkbox" name="song-check" id="song-check-1">
+                        </div>
+                        <span>6</span>
+                        <img src="./img/song6.jpg" alt="노래 1">
+                        <span class="songname">이브,프시케 그리고 푸른수염의 아내</span>
+                        <span class="songname">르세라핌</span>
+                        <div class="heart">
+                            <button class="heart-button" onclick="increaseLikes(this)">❤</button>
+                            <li class="likes-count">0</li>
+                            <span></span>
+                        </div>
+                            <audio controls >
+                                <source src="song1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="song">
+                        <div class="song-checkbox">
+                            <input type="checkbox" name="song-check" id="song-check-1">
+                        </div>
+                        <span>7</span>
+                        <img src="./img/song7.jpg" alt="노래 1">
+                        <span class="songname">Steal The Show</span>
+                        <span class="songname">Lauv</span>
+                        <div class="heart">
+                            <button class="heart-button" onclick="increaseLikes(this)">❤</button>
+                            <li class="likes-count">0</li>
+                            <span></span>
+                        </div>
+                            <audio controls >
+                                <source src="song1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="song">
+                        <div class="song-checkbox">
+                            <input type="checkbox" name="song-check" id="song-check-1">
+                        </div>
+                        <span>8</span>
+                        <img src="./img/song8.webp" alt="노래 1">
+                        <span class="songname">Spicy</span>
+                        <span class="songname">aespa</span>
+                        <div class="heart">
+                            <button class="heart-button" onclick="increaseLikes(this)">❤</button>
+                            <li class="likes-count">0</li>
+                            <span></span>
+                        </div>
+                            <audio controls >
+                                <source src="song1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="song">
+                        <div class="song-checkbox">
+                            <input type="checkbox" name="song-check" id="song-check-1">
+                        </div>
+                        <span>9</span>
+                        <img src="./img/song9.webp" alt="노래 1">
+                        <span class="songname">UNFORGIVEN</span>
+                        <span class="songname">르세라핌</span>
+                        <div class="heart">
+                            <button class="heart-button" onclick="increaseLikes(this)">❤</button>
+                            <li class="likes-count">0</li>
+                            <span></span>
+                        </div>
+                            <audio controls >
+                                <source src="song1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="song">
+                        <div class="song-checkbox">
+                            <input type="checkbox" name="song-check" id="song-check-1">
+                        </div>
+                        <span>10</span>
+                        <img src="./img/song10.webp" alt="노래 1">
+                        <span class="songname">Kitsch</span>
+                        <span class="songname">아이브</span>
+                        <div class="heart">
+                            <button class="heart-button" onclick="increaseLikes(this)">❤</button>
+                            <li class="likes-count">0</li>
+                            <span></span>
+                        </div>
+                            <audio controls >
+                                <source src="song1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+                
+            </section>
+
+            <footer>
+                <div class="footer_line"></div>
+                <div>
+                    <ul class="footer_menu">
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">고객센터</a></li>
+                        <li><a href="">제휴/프로모션</a></li>
+                        <li><a href=""> 개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <p></p>
+                <div class="Site_info">
+                    <img id="footer_logo" src="./img/로고.png" alt="">
+                    <span class="Sitename">(주)WATERMELON MUSIC</span>
+                    <span>대구광역시 중구 중앙대로 366 반월센트럴타워 10층</span>
+                    <span>대표이사 : 윤치연, 김예솔, 이헌지</span>
+                    <span>사업자등록번호 : 024-04-02023</span>
+                    <br>
+                    <span>문의전화 : 1544-1111 (평일 09:00-18:00)</span>
+                    <span>WATERMELON MUSIC으로 음악과 함께하는 즐거운 하루 보내세요!</span>
+                </div>
+                
+            </footer>
+    </div>
+</body>
+</html>
