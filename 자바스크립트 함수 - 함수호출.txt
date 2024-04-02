@@ -1,0 +1,32 @@
+자바스크립트 함수 -> 함수호출
+
+매개변수 -> 리턴값 
+
+자료 데이터 -> 매개변수 f(x) -> 함수
+
+promise를 async awit으로 교체할때
+promise then catch finally 형식
+-> promise 기반 
+
+
+비동기 순서문제
+promise, process.nextTick => 마이크로, 나머지 매크로
+
+
+promise, process.nextTick 실행순서
+1. 프로미스 내부함수 실행
+2. Promise 안 익명 함수는 호출되는 것이 없는데 호출
+3. 콜백함수 resolve, 셋타임아웃 두 함수가 백그라운드
+4. console.log실행
+5.p.then도 백그라운드로 간다.
+6. 콜스택이 비워진 후, 백그라운드에서 셋타임앙웃 안에 함수 꺼내 macro 큐로 간 후 스택에 가서 호출
+
+
+then catch 패턴
+then catch 붙일 필요 없다.
+
+
+Promise allSettled
+Promise allSettled는 all의 단점을 보완한 함수
+all의 경우 여러 api 요청시 한가지가 에러 발생하면 나머지 다른 api 요청이 다 무산되는 경우 발생
+allSettled는 오류가 발생하는 api 요청을 무시하고 나머지 api요청 정상적 작동

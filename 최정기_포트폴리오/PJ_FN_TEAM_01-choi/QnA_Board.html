@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 네이버폰트 -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <!-- common -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- header -->
+    <link rel="stylesheet" href="css/header.css">
+    <!-- QnA_Page_Section -->
+    <link rel="stylesheet" href="css/QnA_Write.css">
+    <!-- footer -->
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+        <!-- header -->
+        <!-- top-header -->
+        <header>
+            <div class="top-header">
+                <a href="./index.html"><img class="logo" src="./img/로고.png" alt=""></a>
+                <div class="search_box">
+                    <div>SEARCH</div>
+                    <input type="text" placeholder="듣고 싶은 노래를 검색하세요!">
+                    <a href=""><img src="./img/search.svg" alt=""></a>
+                </div>
+                <ul>
+                    <li><a href="" style="color:rgb(92, 115, 6); font-family: 'NanumSquareAceb';"><img
+                                src="./img/add.svg" alt=""> 멤버십가입</a></li>
+                    <li><a href=""><img src="./img/english.svg" alt="">ENGLISH</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- header nav -->
+        <nav>
+            <div class="navi">
+                <div class="Menu_left">
+                    <ul class="one--depth">
+                        <li>
+                            <a href="">수박차트</a>
+                            <ul class="two--depth">
+                                <li><a href="./TOP100.html">국내TOP100</a></li>
+                                <li><a href="">해외TOP100</a></li>
+                                <li><a href="">최신음악</a></li>
+                                <li><a href="">장르음악</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박DJ</a>
+                            <ul class="two--depth">
+                                <li><a href="">#투데이</a></li>
+                                <li><a href="">테마장르</a></li>
+                                <li><a href="">인기선곡</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박TV</a>
+                            <ul class="two--depth">
+                                <li><a href="">뮤직비디오</a></li>
+                                <li><a href="">수박방송</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">수박매거진</a>
+                            <ul class="two--depth">
+                                <li><a href="./magazine.html">오늘의매거진</a></li>
+                                <li><a href="">완결매거진</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Menu_right">
+                    <ul class="one--depth">
+                        <li>
+                            <a href="">공지사항</a>
+                            <ul class="two--depth">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="./QnA_Page.html">QnA</a></li>
+                                <li><a href="">자주하는질문</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">마이페이지</a>
+                            <ul class="two--depth">
+                                <li><a href="">정보수정</a></li>
+                                <li><a href="">마이리스트</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="header_line"></div>
+
+
+
+        <!-- section 2 -->
+        <section class="sec_2">
+            <div class="QnA_title">
+                <div id="QnA">QnA</div>
+                <div class="dropdown">
+                    <button class="dropbtn">&nbsp;카테고리<img src="./img/drop.svg" alt=""></button>
+                    <div class="drop_content">
+                        <a href="">서비스문의/오류</a>
+                        <a href="">결제/해지/환불</a>
+                        <a href="">이벤트문의</a>
+                        <a href="">이용권 사용문의</a>
+                        <a href="">회원정보</a>
+                        <a href="">기타</a>
+
+                    </div>
+                </div>
+            </div>
+            <table class="QnA_l">
+                <!-- QnA 목록 테이블 -->
+            </table>
+            
+            <!-- 글 작성 폼 -->
+            <div id="writeForm" style="display: none;">
+                <h2>작성글</h2>
+                <form>
+                    <label for="title">제목</label>
+                    <input type="text" id="title" name="title">
+                    <label for="content">내용</label>
+                    <textarea id="content" name="content" style="height: 300px;"></textarea>
+                    
+                </form>
+            </div>
+            <div class="btn_write">
+                    <input type="button" value="작성" onclick="location.href='QnA_Page.html'">
+                    <input type="button" value="수정">
+                    <input type="button" value="삭제">
+            </div>
+            
+        </section>
+
+
+
+        <!-- footer -->
+        <footer>
+            <div class="footer_line"></div>
+            <div>
+                <ul class="footer_menu">
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">고객센터</a></li>
+                    <li><a href="">제휴/프로모션</a></li>
+                    <li><a href=""> 개인정보처리방침</a></li>
+                </ul>
+            </div>
+            <p></p>
+            <div class="Site_info">
+                <img id="footer_logo" src="./img/로고.png" alt="">
+                <span class="Sitename">(주)WATERMELON MUSIC</span>
+                <span>대구광역시 중구 중앙대로 366 반월센트럴타워 10층</span>
+                <span>대표이사 : 윤치연, 김예솔, 이헌지</span>
+                <span>사업자등록번호 : 024-04-02023</span>
+                <br>
+                <span>문의전화 : 1544-1111 (평일 09:00-18:00)</span>
+                <span>WATERMELON MUSIC으로 음악과 함께하는 즐거운 하루 보내세요!</span>
+            </div>
+
+        </footer>
+    </div>
+
+    <script>
+        function toggleWriteForm() {
+            var writeForm = document.getElementById("writeForm");
+            if (writeForm.style.display === "none") {
+                writeForm.style.display = "block";
+            } else {
+                writeForm.style.display = "none";
+            }
+        }
+
+        // 텍스트 입력창 토글 함수 호출
+        document.querySelector('.btn_write input[type="button"]').addEventListener('click', toggleWriteForm);
+
+        // 페이지 로드 시 Write form을 보이도록 설정
+        window.addEventListener('DOMContentLoaded', function () {
+            var writeForm = document.getElementById("writeForm");
+            writeForm.style.display = "block";
+        });
+
+    </script>
+       <script>
+        // 작성 버튼 클릭 시 동작
+        document.querySelector('.btn_write input[type="button"]').addEventListener('click', function () {
+            var writePage = document.getElementById("writePage");
+            writePage.style.display = "block";
+            // 이전 페이지 숨기기
+            var sec2 = document.querySelector('.sec_2');
+            sec2.style.display = "none";
+
+            // 수정 및 삭제 버튼 위치 변경
+            var btnWrite = document.querySelector('.btn_write input[type="button"]');
+            var btnUpdate = document.createElement('input');
+            btnUpdate.setAttribute('type', 'button');
+            btnUpdate.setAttribute('value', '수정');
+            btnUpdate.setAttribute('id', 'btn_update');
+            btnUpdate.addEventListener('click', function () {
+                // 수정 버튼 클릭 시 동작
+            });
+            btnWrite.parentElement.insertBefore(btnUpdate, btnWrite);
+
+            var btnDelete = document.createElement('input');
+            btnDelete.setAttribute('type', 'button');
+            btnDelete.setAttribute('value', '삭제');
+            btnDelete.setAttribute('id', 'btn_delete');
+            btnDelete.addEventListener('click', function () {
+                // 삭제 버튼 클릭 시 동작
+            });
+            btnWrite.parentElement.insertBefore(btnDelete, btnWrite);
+        });
+    </script>
+
+    
+</body>
+
+</html>
